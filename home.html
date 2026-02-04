@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="top-right">
+<a href="/profile"><i class="fa fa-user"></i></a>
+</div>
+
+<h2 style="text-align:center;margin:20px;">🌱 Community Plantations</h2>
+
+{% for p in plants %}
+<div class="card">
+<b>{{p[2]}}</b> by {{p[1]}}
+<div class="map">
+<iframe src="https://maps.google.com/maps?q={{p[3]}}&output=embed"></iframe>
+</div>
+</div>
+{% endfor %}
+
+<canvas id="chart"></canvas>
+
+<a href="/add" class="add-btn"><i class="fa fa-plus"></i></a>
+
+<script>
+new Chart(document.getElementById("chart"),{
+type:"line",
+data:{labels:["Plant Growth"],datasets:[{data:[20,40,60,80,100]}]},
+options:{animation:true}
+});
+</script>
+{% endblock %}

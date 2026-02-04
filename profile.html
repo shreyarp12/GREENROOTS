@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="center">
+<h2>Profile</h2>
+<p>Name: {{user[1]}}</p>
+<p>Email: {{user[2]}}</p>
+<p>Address: {{user[4]}}</p>
+<a href="/logout">Logout</a>
+</div>
+{% endblock %}

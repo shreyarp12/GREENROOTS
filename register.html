@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="center">
+<div class="card-ui">
+<center>
+<h2 class="form-title">Create Account</h2>
+</center>
+
+<form method="post">
+<input name="name" placeholder="Full Name" required>
+<input name="email" placeholder="Email" required>
+<input name="password" type="password" placeholder="Password" required>
+<textarea name="address" placeholder="Address" required></textarea>
+<button style="width:100%;margin-top:10px;">Register</button>
+</form>
+</div>
+</div>
+{% endblock %}

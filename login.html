@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="center">
+  <div class="card-ui">
+
+    <div class="logo-wrap">
+      <img src="/static/images/logo.png" class="logo">
+      <h2 class="form-title">GREENROOTS</h2>
+    </div>
+
+    <form method="post">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button class="full-btn">Login</button>
+    </form>
+
+    <div class="bottom-text">
+      <a href="/register">New user? Register</a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

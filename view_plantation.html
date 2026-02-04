@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Plantations</h2>
+{% for p in plants %}
+<div class="card">
+{{p[2]}} - {{p[4]}}%
+<a href="/update/{{p[0]}}">Update</a>
+</div>
+{% endfor %}
+{% endblock %}
